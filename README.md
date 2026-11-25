@@ -18,3 +18,12 @@ streamlit run app.py
 The app connects to `http://localhost:8000` by default. To use another backend
 instance, set `BACKEND_API_URL` in the environment where Streamlit runs; the
 backend URL is not exposed as an editable setting in the app.
+
+## Run frontend tests
+
+The UI tests use Streamlit's `AppTest` and mock backend requests, so they do
+not require a running backend or model API key. From this directory, run:
+
+```powershell
+python -m unittest discover -s tests -v
+```
